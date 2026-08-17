@@ -14,7 +14,7 @@ int main(void){
     );
     if(socket_my < 0){
         perror("tcp_socket()");
-        return -1
+        return -1; 
     }
 
      struct sockaddr_in addr =
@@ -26,9 +26,19 @@ int main(void){
     
     printf("Success make a socket");
     int client_connection = accept(socket_my,0,0);
-    bind(socket_my,&addr,sizeof(addr));
+    if  (bind(socket_my,&addr,sizeof(addr)) < 0){
+        perror("bind(socket_my,&addr,sizeof(addr)) < 0");
+        return -1; 
+    }
 
-    listen(socket_my,10);
+    if  (listen(socket_my,10) < -1){
+        printf("Not listen")
+    }
+    while (1)
+    {
+        
+    }
+    
     recv(client_connection,buffer,256,0);
 
 }
