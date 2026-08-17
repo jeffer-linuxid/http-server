@@ -10,7 +10,7 @@ int server_fd;
 int new_fd;
 
 void *handle_client(void *arg) {
-    int client_fd = *(int *)arg;   // copia o valor ANTES que o main sobrescreva new_fd
+    int client_fd = *(int *)arg; 
 
     char buffer[256] = {0};
     read(client_fd, buffer, sizeof(buffer));
