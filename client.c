@@ -8,7 +8,7 @@ void *handle_client(void *arg) {
     printf("response: %s\n", buffer);
 
     char *response = "Mensagem recebida!\n";
-    write(client_fd, resposta, strlen(resposta));
+    write(client_fd, response, strlen(response));
 
     close(client_fd);
     return NULL;
