@@ -1,5 +1,5 @@
 # 🌐 http-server
-em progresso e feito na raça sem ia
+em progresso e feito na raça sem ia (obs atualmente usei par debugar e acabou que alguma partes ela mexeu sem eu querer entao talvez tenha partes em portugues onde nao deve estar mas a base do codigo continua sendo na raça so 4% de ia)
 
 
 ![C](https://img.shields.io/badge/language-C-00599C.svg)
