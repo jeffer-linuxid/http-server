@@ -24,14 +24,47 @@ Este projeto é uma implementação minimalista de um servidor HTTP, construída
 
 ## 🛠️ Como compilar e rodar
 
+### Pré-requisitos
+- Linux (ou WSL)
+- `gcc` instalado
+
+### 1. Clonar o repositório
 ```bash
 git clone git@github.com:jeffer-linuxid/http-server.git
 cd http-server
+```
+
+### 2. Estrutura de pastas
+O servidor serve arquivos estáticos de dentro da pasta `public/`, então garanta que ela existe no mesmo diretório de onde você vai **executar** o binário (não de onde está o `.c`):
+
+
+### 3. Compilar
+```bash
 gcc -o http-server main.c
+```
+
+### 4. Rodar
+```bash
 ./http-server
 ```
 
+O servidor sobe em `http://localhost:8080` e serve qualquer arquivo dentro de `public/` (ex: `/index.html`, `/style.css`, `/script.js`). Acessar `/` serve automaticamente `public/index.html`.
+
+### 5. Testar
+No navegador:
+
+
+> ⚠️ Use `http://`, não `https://` — o servidor não fala TLS/SSL. Se o navegador redirecionar sozinho pra `https://` (HSTS), digite o endereço manualmente ou teste via terminal.
+
+Ou via terminal:
+```bash
+curl -v http://localhost:8080/
+```
+
+### Encerrar
+`Ctrl+C` no terminal onde o servidor está rodando.
 > ⚠️ Ajuste os comandos de compilação e execução conforme a estrutura real do projeto (Makefile, nome dos arquivos-fonte, porta padrão, etc.)
+
 
 ## 📚 Referências e material de estudo
 
