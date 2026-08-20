@@ -9,6 +9,20 @@
 int server_fd;
 int new_fd;
 
+void *handle_client(void *arg) {
+    int client_fd = *(int *)arg; 
+    char buffer[256] = {0};
+    read(client_fd, buffer, sizeof(buffer));
+    printf("Receive: %s\n", buffer);
+
+    char *response = "Mensenge receive!\n";
+    write(client_fd, response, strlen(response));
+
+    close(client_fd);
+    return 0;
+    
+}
+
 
 int main(void)
 {
