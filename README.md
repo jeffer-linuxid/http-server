@@ -4,8 +4,6 @@ em progresso e feito na raça sem ia (obs atualmente usei par debugar e acabou q
 
 ![C](https://img.shields.io/badge/language-C-00599C.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%2F%20Arch-1793D1.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-
 > Servidor HTTP simples, implementado do zero em C, como projeto de estudo sobre sockets, TCP/IP e o protocolo HTTP.
 
 ## 📌 Sobre
